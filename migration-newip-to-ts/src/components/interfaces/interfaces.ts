@@ -27,3 +27,14 @@ type Data = NewsData | SourceData;
 export interface View {
     draw(data: Data[]): void;
 }
+
+export interface ResponseNews {
+    articles: NewsData[];
+    status: string;
+    totalResults: number;
+}
+
+export interface ResponseSource {
+    sources: SourceData[];
+    status: string;
+}
