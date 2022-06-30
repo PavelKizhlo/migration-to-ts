@@ -1,8 +1,8 @@
 import './news.css';
-import { Data, View } from '../../interfaces/interfaces';
+import { NewsData, View } from '../../interfaces/interfaces';
 
 class News implements View {
-    draw(data: Data[]) {
+    draw(data: NewsData[]) {
         const news = data.length >= 10 ? data.filter((_item, idx) => idx < 10) : data;
 
         const fragment = document.createDocumentFragment();

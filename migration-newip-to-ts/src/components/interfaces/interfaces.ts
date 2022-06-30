@@ -1,4 +1,4 @@
-export interface Data {
+export interface NewsData {
     author: string;
     content: string;
     description: string;
@@ -11,6 +11,18 @@ export interface Data {
     url: string;
     urlToImage: string;
 }
+
+export interface SourceData {
+    category: string;
+    country: string;
+    description: string;
+    id: string;
+    language: string;
+    name: string;
+    url: string;
+}
+
+type Data = NewsData | SourceData;
 
 export interface View {
     draw(data: Data[]): void;
