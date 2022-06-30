@@ -11,3 +11,7 @@ export interface Data {
     url: string;
     urlToImage: string;
 }
+
+export interface View {
+    draw(data: Data[]): void;
+}
