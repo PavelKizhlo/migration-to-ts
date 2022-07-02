@@ -38,3 +38,18 @@ export interface ResponseSource {
     sources: SourceData[];
     status: string;
 }
+
+export interface LoaderOptions {
+    apiKey: string;
+}
+
+export interface UrlOptions {
+    sources?: string;
+}
+
+export interface GetRespOptions {
+    endpoint: string;
+    options: {
+        [index: string]: string;
+    };
+}
