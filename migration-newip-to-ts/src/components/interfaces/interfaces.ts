@@ -1,25 +1,25 @@
 export interface NewsData {
-    author: string;
-    content: string;
-    description: string;
-    publishedAt: string;
-    source: {
-        id: string;
-        name: string;
+    readonly author: string;
+    readonly content: string;
+    readonly description: string;
+    readonly publishedAt: string;
+    readonly source: {
+        readonly id: string;
+        readonly name: string;
     };
-    title: string;
-    url: string;
-    urlToImage: string;
+    readonly title: string;
+    readonly url: string;
+    readonly urlToImage: string;
 }
 
 export interface SourceData {
-    category: string;
-    country: string;
-    description: string;
-    id: string;
-    language: string;
-    name: string;
-    url: string;
+    readonly category: string;
+    readonly country: string;
+    readonly description: string;
+    readonly id: string;
+    readonly language: string;
+    readonly name: string;
+    readonly url: string;
 }
 
 type Data = NewsData | SourceData;
@@ -29,18 +29,18 @@ export interface View {
 }
 
 export interface ResponseNews {
-    articles: NewsData[];
-    status: string;
-    totalResults: number;
+    readonly articles: NewsData[];
+    readonly status: string;
+    readonly totalResults: number;
 }
 
 export interface ResponseSource {
-    sources: SourceData[];
-    status: string;
+    readonly sources: SourceData[];
+    readonly status: string;
 }
 
 export interface LoaderOptions {
-    apiKey: string;
+    readonly apiKey: string;
 }
 
 export interface UrlOptions {
