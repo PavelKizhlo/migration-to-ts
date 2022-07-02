@@ -1,8 +1,9 @@
 import AppLoader from './appLoader';
-import { CallbackVoid, FetchData } from '../interfaces/types';
+import { CallbackVoid } from '../interfaces/types';
+import { ResponseNews, ResponseSource } from '../interfaces/interfaces';
 
 class AppController extends AppLoader {
-    getSources<T extends FetchData>(callback: CallbackVoid<T>) {
+    getSources<T extends ResponseSource>(callback: CallbackVoid<T>) {
         super.getResp(
             {
                 endpoint: 'sources',
@@ -11,7 +12,7 @@ class AppController extends AppLoader {
         );
     }
 
-    getNews<T extends FetchData>(e: Event, callback: CallbackVoid<T>) {
+    getNews<T extends ResponseNews>(e: Event, callback: CallbackVoid<T>) {
         let target = e.target;
         const newsContainer = e.currentTarget;
 
