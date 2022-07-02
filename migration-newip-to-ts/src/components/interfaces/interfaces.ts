@@ -49,7 +49,7 @@ export interface UrlOptions {
 
 export interface GetRespOptions {
     endpoint: string;
-    options: {
+    options?: {
         [index: string]: string;
     };
 }
