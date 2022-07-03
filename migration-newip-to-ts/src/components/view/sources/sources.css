@@ -31,3 +31,28 @@
     font-weight: 400;
     white-space: nowrap;
 }
+
+@media (max-width: 768px) {
+    .sources {
+        text-align: center;
+    }
+
+    .source__item {
+        border: 1px solid #30c5ff;
+        padding: 1em 1em;
+    }
+
+    .source__item:hover,
+    .source__item:focus {
+        border-color: #30c5ff;
+        color: #70d6ff;
+        box-shadow: none;
+        transform: none;
+    }
+}
+
+@media (max-width: 500px) {
+    .sources {
+        display: block;
+    }
+}

@@ -23,7 +23,7 @@ header h1 {
 
 header .alphabet {
     display: flex;
-    gap: 0.4rem;
+    gap: 0.37rem;
     flex-wrap: wrap;
     font-size: 1.5rem;
     color: #70d6ff;
@@ -115,4 +115,71 @@ footer .copyright:before {
     font-size: 4rem;
     color:#333;
     text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+    .letter:hover,
+    .letter:focus {
+        color: #70d6ff;
+        text-shadow: none;
+        transform: none;
+    }
+
+    .rss-link:hover {
+        transform: none;
+    }
+
+    .github-link:hover span{
+        color: #70d6ff;
+        text-shadow: none;
+    }
+
+    .github-link:hover svg path{
+        fill: #70d6ff;
+    }
+
+    header .alphabet {
+        display: flex;
+        justify-content: center;
+        gap: 0.37rem;
+        font-size: 1rem;
+    }
+
+    .sources-placeholder {
+        display: none;
+        font-size: 1.5rem;
+        color: #333;
+        text-transform: uppercase;
+    }
+
+    .news-placeholder {
+        padding-top: 6vh;
+        font-size: 3rem;
+    }
+
+    footer {
+        height: auto;
+    }
+}
+
+@media (max-width: 500px) {
+    .sources-placeholder {
+        font-size: 1.1rem;
+    }
+
+    .news {
+        margin-bottom: 70px;
+    }
+
+    .news-placeholder {
+        padding-top: 4vh;
+        font-size: 1.5rem;
+    }
+
+    footer {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+    }
 }

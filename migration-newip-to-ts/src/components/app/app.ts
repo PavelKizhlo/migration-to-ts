@@ -19,7 +19,7 @@ class App {
     }
 
     private sortSources(): void {
-        setTimeout(this.showSorted.bind(this), 350);
+        setTimeout(this.showSorted.bind(this), 450);
         const alphabet = document.querySelector('.alphabet') as HTMLElement;
 
         alphabet.addEventListener('click', (e) => {
