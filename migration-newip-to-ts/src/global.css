@@ -1,4 +1,11 @@
+html {
+    height: 100%;
+}
+
 body {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    height: 100%;
     color: #fff;
     background: #17181c;
     font-family: sans-serif;
@@ -6,11 +13,39 @@ body {
 
 header {
     padding: 10px 30px;
+    margin-bottom: 30px;
 }
 
 header h1 {
     font-size: 40px;
     font-weight: 800;
+}
+
+header .alphabet {
+    display: flex;
+    gap: 0.4rem;
+    flex-wrap: wrap;
+    font-size: 1.5rem;
+    color: #70d6ff;
+}
+
+.letter {
+    display: block;
+    padding: 2px;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.pressed {
+    color: #69db7e;
+    text-shadow: 2px 2px 15px #3fcc59;
+}
+
+.letter:hover,
+.letter:focus {
+    color: #69db7e;
+    text-shadow: 2px 2px 15px #3fcc59;
+    transform: translateY(-0.25em);
 }
 
 footer {

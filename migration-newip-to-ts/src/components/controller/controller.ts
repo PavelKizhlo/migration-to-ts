@@ -3,7 +3,7 @@ import { CallbackVoid } from '../interfaces/types';
 import { ResponseNews, ResponseSource } from '../interfaces/interfaces';
 
 class AppController extends AppLoader {
-    getSources<T extends ResponseSource>(callback: CallbackVoid<T>) {
+    getSources<T extends ResponseSource>(callback: CallbackVoid<T>): void {
         super.getResp(
             {
                 endpoint: 'sources',
@@ -12,19 +12,15 @@ class AppController extends AppLoader {
         );
     }
 
-    getNews<T extends ResponseNews>(e: Event, callback: CallbackVoid<T>) {
+    getNews<T extends ResponseNews>(e: Event, callback: CallbackVoid<T>): void {
         let target = e.target;
-        const newsContainer = e.currentTarget;
+        const newsContainer = e.currentTarget as HTMLElement;
 
         while (target && target !== newsContainer) {
             if ((target as HTMLElement).classList.contains('source__item')) {
                 const sourceId = (target as HTMLElement).getAttribute('data-source-id');
-                if (
-                    newsContainer &&
-                    sourceId &&
-                    (newsContainer as HTMLElement).getAttribute('data-source') !== sourceId
-                ) {
-                    (newsContainer as HTMLElement).setAttribute('data-source', sourceId);
+                if (newsContainer && sourceId && newsContainer.getAttribute('data-source') !== sourceId) {
+                    newsContainer.setAttribute('data-source', sourceId);
                     super.getResp(
                         {
                             endpoint: 'everything',
