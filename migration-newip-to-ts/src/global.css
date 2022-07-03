@@ -51,6 +51,7 @@ header .alphabet {
 footer {
     height: 100px;
     display: flex;
+    gap: 80px;
     align-items: center;
     justify-content: center;
 }
@@ -67,4 +68,51 @@ footer .copyright a:hover {
 }
 footer .copyright:before {
     content: '©';
+}
+
+.rss-link {
+    display: block;
+    width: 100px;
+    transition: 0.25s;
+}
+
+.rss-link:hover {
+    transform: rotateZ(-10deg);
+}
+
+.github-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: #30c5ff;
+    transition: 0.25s;
+}
+
+.github-link:hover span{
+    color: #69db7e;
+    text-shadow: 2px 2px 15px #3fcc59;
+}
+
+.github-link:hover svg path{
+    fill: #69db7e;
+}
+
+.sources-placeholder {
+    display: none;
+    font-size: 2.2rem;
+    color: #333;
+    text-transform: uppercase;
+}
+
+.news {
+    text-align: center;
+}
+
+.news-placeholder {
+    display: block;
+    padding-top: 15vh;
+    font-size: 4rem;
+    color:#333;
+    text-transform: uppercase;
 }
